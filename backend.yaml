@@ -56,10 +56,11 @@
         Import dump.sql,
         similar to mysql -u <username> -p <password> < dump.sql
       community.mysql.mysql_db:
+        login_host: mysql.devsecmlops.online
         login_user: root
         login_password: ExpenseApp@1
         state: import
-        name: all
+        # name: all
         target: /app/schema/backend.sql
     
     - name: Make sure a backend service unit is running
