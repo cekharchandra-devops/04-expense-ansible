@@ -52,16 +52,15 @@
           - cryptography
         executable: pip3.9
     
-    - name: >
-        Import dump.sql,
-        similar to mysql -u <username> -p <password> < dump.sql
-      community.mysql.mysql_db:
+    - name: Import backend.sql
+      community.mysql.mysql_info:
         login_host: mysql.devsecmlops.online
         login_user: root
         login_password: ExpenseApp@1
         state: import
         name: all
         target: /app/schema/backend.sql
+        config_file: ''
     
     - name: Make sure a backend service unit is running
       ansible.builtin.systemd_service:
