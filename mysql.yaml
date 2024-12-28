@@ -1,4 +1,4 @@
-- name: install mysql server and run the scripts
+- name: install mysql server and reset root password
   hosts: mysql
   become: yes
   vars:

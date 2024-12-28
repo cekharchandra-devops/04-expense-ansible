@@ -55,6 +55,7 @@
         name: 
           - PyMySQL
           - cryptography
+          - mysql
         executable: pip3.9
     
     - name: Import backend.sql
