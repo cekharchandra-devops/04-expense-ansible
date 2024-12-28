@@ -8,7 +8,9 @@
       ansible.builtin.command: dnf module enable nodejs:20 -y
     - name: install nodejs
       ansible.builtin.package:
-        name: nodejs
+        name: 
+          - nodejs
+          - mysql
         state: present
     # - name: install nodejs-20
     #   ansible.builtin.dnf:
@@ -55,7 +57,6 @@
         name: 
           - PyMySQL
           - cryptography
-          - mysql
         executable: pip3.9
     
     - name: Import backend.sql
