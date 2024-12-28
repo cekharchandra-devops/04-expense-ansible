@@ -19,7 +19,7 @@
         name: mysqld
         state: started
         enabled: yes
-    - name: connect mysql server
+    - name: fetch mysql status info
       community.mysql.mysql_info:
         login_user: root
         login_password: "{{ mysql_root_password }}"
